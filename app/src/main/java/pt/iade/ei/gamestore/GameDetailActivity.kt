@@ -34,13 +34,13 @@ class GameDetailActivity : ComponentActivity() {
                             onBuyItem = { item: Item ->
                                 Toast.makeText(
                                     this,
-                                    "Acabou de comprar o item \"${item.name}\" por ${"%.2f".format(item.price)}€",
+                                    "Comprou: \"${item.name}\" Valor: ${"%.2f".format(item.price)}€",
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }
                         )
                     } else {
-                        Toast.makeText(this, "Erro ao carregar o jogo", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Erro a gerar jogo", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 }
