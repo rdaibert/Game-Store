@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import pt.iade.ei.gamestore.model.Game
-import pt.iade.ei.gamestore.model.GameItem
+import pt.iade.ei.gamestore.model.Item
 import pt.iade.ei.gamestore.ui.screens.GameDetailScreen
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
@@ -31,7 +31,7 @@ class GameDetailActivity : ComponentActivity() {
                             game = game,
                             onBack = { finish() },
                             onHomeClick = { finish() },
-                            onBuyItem = { item: GameItem ->
+                            onBuyItem = { item: Item ->
                                 Toast.makeText(
                                     this,
                                     "Acabou de comprar o item \"${item.name}\" por ${"%.2f".format(item.price)}€",

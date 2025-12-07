@@ -13,17 +13,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pt.iade.ei.gamestore.GameData
-import pt.iade.ei.gamestore.model.GameItem
+import pt.iade.ei.gamestore.Data
+import pt.iade.ei.gamestore.model.Item
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PurchaseBottomSheet(
-    item: GameItem,
+    item: Item,
     sheetState: SheetState,
     onDismiss: () -> Unit,
-    onBuy: (GameItem) -> Unit
+    onBuy: (Item) -> Unit
 ) {
     ModalBottomSheet(
         sheetState = sheetState,
@@ -39,8 +39,8 @@ fun PurchaseBottomSheet(
 
 @Composable
 fun PurchaseBottomSheetContent(
-    item: GameItem,
-    onBuy: (GameItem) -> Unit
+    item: Item,
+    onBuy: (Item) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -107,7 +107,7 @@ fun PurchaseBottomSheetContent(
 @Preview(showBackground = true)
 @Composable
 fun PreviewPurchaseSheet() {
-    val item = GameData.games.first().items.first()
+    val item = Data.games.first().items.first()
 
     GameStoreTheme {
         Surface {

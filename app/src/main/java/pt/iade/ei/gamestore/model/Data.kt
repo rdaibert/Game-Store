@@ -1,9 +1,9 @@
 package pt.iade.ei.gamestore
 
 import pt.iade.ei.gamestore.model.Game
-import pt.iade.ei.gamestore.model.GameItem
+import pt.iade.ei.gamestore.model.Item
 
-object GameData {
+object Data {
 
     val games: List<Game> = listOf(
 
@@ -18,7 +18,7 @@ object GameData {
             items = listOf(
 
 
-                GameItem(
+                Item(
                     id = 1,
                     name = "550 Diamantes",
                     price = 11.99,
@@ -28,7 +28,7 @@ object GameData {
                 ),
 
 
-                GameItem(
+                Item(
                     id = 2,
                     name = "Pacote de Vouchers Raros",
                     price = 7.49,
@@ -38,7 +38,7 @@ object GameData {
                 ),
 
 
-                GameItem(
+                Item(
                     id = 3,
                     name = "Farm Pass (Passe da Temporada)",
                     price = 12.99,
@@ -59,7 +59,7 @@ object GameData {
             logoRes = R.drawable.ss_icon,
             items = listOf(
 
-                GameItem(
+                Item(
                     id = 4,
                     name = "750 000 Moedas",
                     price = 9.99,
@@ -68,7 +68,7 @@ object GameData {
                     longDescription = "Com 750 000 moedas podes desbloquear personagens, comprar pranchas e evoluir power-ups. É o pacote ideal para acelerar o progresso e melhorar rapidamente o desempenho nas corridas."
                 ),
 
-                GameItem(
+                Item(
                     id = 5,
                     name = "150 Chaves",
                     price = 7.49,
@@ -77,7 +77,7 @@ object GameData {
                     longDescription = "As chaves são essenciais para continuar a corrida após seres apanhado e são usadas também para desbloquear estilos exclusivos de hoverboards e personagens. Este pack garante muitas chances extras durante as tuas melhores runs."
                 ),
 
-                GameItem(
+                Item(
                     id = 6,
                     name = "Season Hunt Pass",
                     price = 13.99,

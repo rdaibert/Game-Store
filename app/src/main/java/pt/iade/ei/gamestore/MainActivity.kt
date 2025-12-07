@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val games: List<Game> = GameData.games
+        val games: List<Game> = Data.games
 
         setContent {
             GameStoreTheme {

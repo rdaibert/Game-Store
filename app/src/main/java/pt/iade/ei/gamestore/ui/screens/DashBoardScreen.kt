@@ -11,11 +11,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pt.iade.ei.gamestore.GameData
+import pt.iade.ei.gamestore.Data
 import pt.iade.ei.gamestore.model.Game
-import pt.iade.ei.gamestore.model.GameItem
-import pt.iade.ei.gamestore.ui.components.GameDetailHeader
-import pt.iade.ei.gamestore.ui.components.GameItemRow
+import pt.iade.ei.gamestore.model.Item
+import pt.iade.ei.gamestore.ui.usages.GameDetailHeader
+import pt.iade.ei.gamestore.ui.usages.GameItemRow
 import pt.iade.ei.gamestore.ui.utils.BottomBar
 import pt.iade.ei.gamestore.ui.utils.PurchaseBottomSheet
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
@@ -26,9 +26,9 @@ fun GameDetailScreen(
     game: Game,
     onBack: () -> Unit = {},
     onHomeClick: () -> Unit = {},
-    onBuyItem: (GameItem) -> Unit = {}
+    onBuyItem: (Item) -> Unit = {}
 ) {
-    var selectedItem by remember { mutableStateOf<GameItem?>(null) }
+    var selectedItem by remember { mutableStateOf<Item?>(null) }
     var showSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
@@ -106,7 +106,7 @@ fun GameDetailScreen(
 @Preview(showBackground = true)
 @Composable
 fun PreviewHayday() {
-    val game = GameData.games.first { it.id == 1 }
+    val game = Data.games.first { it.id == 1 }
     GameStoreTheme {
         GameDetailScreen(game = game)
     }
@@ -115,7 +115,7 @@ fun PreviewHayday() {
 @Preview(showBackground = true)
 @Composable
 fun PreviewSubWaySurfers() {
-    val game = GameData.games.first { it.id == 2 }
+    val game = Data.games.first { it.id == 2 }
     GameStoreTheme {
         GameDetailScreen(game = game)
     }

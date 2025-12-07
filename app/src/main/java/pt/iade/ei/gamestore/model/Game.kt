@@ -9,5 +9,5 @@ data class Game(
     val imageRes: Int,
     val iconRes: Int,
     val logoRes: Int,
-    val items: List<GameItem>
+    val items: List<Item>
 ) : Serializable

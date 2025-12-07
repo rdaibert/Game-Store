@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.usages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -11,10 +11,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pt.iade.ei.gamestore.GameData
+import pt.iade.ei.gamestore.Data
 import pt.iade.ei.gamestore.model.Game
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
@@ -54,7 +53,7 @@ fun GameDetailHeader(
 @Preview(showBackground = true)
 @Composable
 fun PreviewGameDetailHeaderCS2() {
-    val game = GameData.games.first { it.id == 1 }
+    val game = Data.games.first { it.id == 1 }
     GameStoreTheme {
         GameDetailHeader(game = game)
     }
@@ -63,7 +62,7 @@ fun PreviewGameDetailHeaderCS2() {
 @Preview(showBackground = true)
 @Composable
 fun PreviewGameDetailHeaderClash() {
-    val game = GameData.games.first { it.id == 2 }
+    val game = Data.games.first { it.id == 2 }
     GameStoreTheme {
         GameDetailHeader(game = game)
     }

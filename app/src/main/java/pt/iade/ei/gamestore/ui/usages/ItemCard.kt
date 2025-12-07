@@ -1,4 +1,4 @@
-package pt.iade.ei.gamestore.ui.components
+package pt.iade.ei.gamestore.ui.usages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -15,13 +15,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import pt.iade.ei.gamestore.GameData
-import pt.iade.ei.gamestore.model.GameItem
+import pt.iade.ei.gamestore.Data
+import pt.iade.ei.gamestore.model.Item
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 
 @Composable
 fun GameItemRow(
-    item: GameItem,
+    item: Item,
     onClick: () -> Unit
 ) {
     Card(
@@ -92,7 +92,7 @@ fun GameItemRow(
 @Preview(showBackground = true)
 @Composable
 fun PreviewItemRow() {
-    val item = GameData.games.first().items.first()
+    val item = Data.games.first().items.first()
     GameStoreTheme(darkTheme = true) {
         GameItemRow(item = item, onClick = {})
     }

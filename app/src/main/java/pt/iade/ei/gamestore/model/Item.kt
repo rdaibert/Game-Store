@@ -2,7 +2,7 @@ package pt.iade.ei.gamestore.model
 
 import java.io.Serializable
 
-data class GameItem(
+data class Item(
     val id: Int,
     val name: String,
     val price: Double,

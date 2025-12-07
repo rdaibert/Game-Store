@@ -17,10 +17,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.navigationBarsPadding
-import pt.iade.ei.gamestore.GameData
+import pt.iade.ei.gamestore.Data
 import pt.iade.ei.gamestore.R
 import pt.iade.ei.gamestore.model.Game
-import pt.iade.ei.gamestore.ui.components.GameCard
+import pt.iade.ei.gamestore.ui.usages.GameCard
 import pt.iade.ei.gamestore.ui.theme.GameStoreTheme
 import pt.iade.ei.gamestore.ui.utils.BottomBar
 
@@ -96,7 +96,7 @@ fun GameListScreen(
 fun PreviewGameList() {
     GameStoreTheme(darkTheme = true) {
         GameListScreen(
-            games = GameData.games,
+            games = Data.games,
             onGameClick = {}
         )
     }
